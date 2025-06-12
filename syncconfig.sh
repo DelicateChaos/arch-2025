@@ -30,6 +30,8 @@ sudo pacman -S --needed --noconfirm ffmpeg zoxide fzf stow neovim
 # GUI
 echo "Installing GUI apps.."
 sudo pacman -S --needed --noconfirm steam discord obs-studio emacs-wayland 
-yay -S --noconfirm librewolf
+yay -S --needed --noconfirm firefox-developer-edition
 # TODO: Add librewolf
-
+#Make dotfiles directory
+echo "Making dotfile directory.."
+mkdir dotfiles
