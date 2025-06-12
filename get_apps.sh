@@ -31,7 +31,7 @@ echo "Installing DE Components.."
 sudo pacman -S --needed --noconfirm waybar
 # TUI
 echo "Installing TUI.."
-sudo pacman -S --needed --noconfirm ffmpeg zoxide fzf stow neovim htop tree bat curl rsync grep bash-completion neofetch
+sudo pacman -S --needed --noconfirm ffmpeg zoxide fzf stow neovim htop tree bat curl rsync grep bash-completion neofetch zsh
 # GUI
 echo "Installing GUI apps.."
 sudo pacman -S --needed --noconfirm discord obs-studio emacs-wayland 
