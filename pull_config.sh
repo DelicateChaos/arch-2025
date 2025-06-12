@@ -32,4 +32,4 @@ pull_dotfiles() {
     fi
 }
 
-pull_dotfiles()
+pull_dotfiles
