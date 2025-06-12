@@ -8,12 +8,23 @@ refresh() {
     echo "Reloaded config successfully!"
 }
 
+update_system_config() {
+    cd "$TARGET_DIR"
+    # initially create symlinks to all directories in stow (and overwrite the existing stow files)
+    stow --dotfiles --adopt . 
+    # Reset git to main branch
+    git reset --hard
+    refresh
+}
+
 pull_dotfiles() {
     # Create directory if it doesn't exist
     echo "Checking directory"
     if [ ! -d "$TARGET_DIR" ]; then
         echo "No dotfiles directory found, cloning custom config..."
         git clone "$REPO_URL" "$TARGET_DIR"
+        cd "$TARGET_DIR"
+        update_system_config
         
     else
         # If it's a git repo, ensure correct remote and optionally pull
@@ -24,7 +35,7 @@ pull_dotfiles() {
                 echo "Attempting to pull directory"
                 git pull origin $(git rev-parse --abbrev-ref HEAD)
                 # Reloads the hyperctrl 
-                refresh
+                update_system_config
             else
                 echo "Dotfiles Directory exists with a different Git origin. Skipping."
             fi

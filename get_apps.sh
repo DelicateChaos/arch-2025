@@ -1,4 +1,5 @@
 #!/bin/bash
+
 echo "Starting instillation for custom apps"
 # This assumes a fresh arch installation of hyperland profile. 
 # Refrence libraries 
@@ -6,8 +7,6 @@ echo "Starting instillation for custom apps"
 # v4l-utils lib32-v4l-utils libgpg-error lib32-libgpg-error alsa-plugins lib32-alsa-plugins alsa-lib lib32-alsa-lib libjpeg-turbo lib32-libjpeg-turbo sqlite lib32-sqlite libxcomposite lib32-libxcomposite libxinerama \
 #lib32-libxinerama ncurses lib32-ncurses opencl-icd-loader lib32-opencl-icd-loader libxslt lib32-libxslt libva lib32-libva gtk3 lib32-gtk3 gst-plugins-base-libs lib32-gst-plugins-base-libs vulkan-icd-loader \
 # lib32-vulkan-icd-loader obs-studio discord mangohud lib32-mangohud goverlay gamescope solaar bluez bluez-utils lib32-libpulse pipewire pipewire-pulse pipewire-alsa linux-headers xwaylandvideobridge
-
-
 
 install_yay() {
     if ! command -v yay &> /dev/null; then
