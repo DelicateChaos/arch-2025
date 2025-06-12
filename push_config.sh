@@ -10,3 +10,5 @@ push_dotfiles() {
     git commit -m "Updated Config"
     git push
 }
+
+push_dotfiles
