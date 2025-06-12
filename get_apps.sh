@@ -35,7 +35,7 @@ sudo pacman -S --needed --noconfirm waybar
 yay -S --needed --noconfirm swww      
 # TUI
 echo "Installing TUI.."
-sudo pacman -S --needed --noconfirm ffmpeg zoxide fzf stow neovim htop tree bat curl rsync grep bash-completion zsh
+sudo pacman -S --needed --noconfirm ffmpeg zoxide fzf stow neovim htop btop tree bat curl rsync grep bash-completion zsh
 yay -S --needed --noconfirm neofetch
 # GUI
 echo "Installing GUI apps.."
