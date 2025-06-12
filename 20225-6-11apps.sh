@@ -1,5 +1,5 @@
 echo "Starting instillation for custom apps"
-
+# This assumes a fresh arch installation of hyperland profile. 
 # Refrence libraries 
 #sudo pacman -S --noconfirm steam lutris wine-staging winetricks gamemode lib32-gamemode giflib lib32-giflib libpng lib32-libpng libldap lib32-libldap gnutls lib32-gnutls mpg123 lib32-mpg123 openal lib32-openal \
 #v4l-utils lib32-v4l-utils libgpg-error lib32-libgpg-error alsa-plugins lib32-alsa-plugins alsa-lib lib32-alsa-lib libjpeg-turbo lib32-libjpeg-turbo sqlite lib32-sqlite libxcomposite lib32-libxcomposite libxinerama \
@@ -23,13 +23,13 @@ install_yay() {
 install_yay
 # Desktop Enviroment 
 echo "Installing DE.."
-sudo pacman -S --noconfirm waybar
+sudo pacman -S --needed --noconfirm waybar
 # TUI
 echo "Installing TUI.."
-sudo pacman -S --noconfirm ffmpeg zoxide fzf stow
+sudo pacman -S --needed --noconfirm ffmpeg zoxide fzf stow neovim
 # GUI
 echo "Installing GUI apps.."
-sudo pacman -S --noconfirm steam discord obs-studio emacs-wayland 
+sudo pacman -S --needed --noconfirm steam discord obs-studio emacs-wayland 
 yay -S --noconfirm librewolf
 # TODO: Add librewolf
 
