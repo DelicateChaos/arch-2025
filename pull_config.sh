@@ -5,11 +5,12 @@ TARGET_DIR="$HOME/dotfiles"
 
 refresh() {
     hyprctl reload
+    echo "Reloaded config successfully!"
 }
 
 pull_dotfiles() {
     # Create directory if it doesn't exist
-    echo "Attempting dotfiles configuration"
+    echo "Checking directory"
     if [ ! -d "$TARGET_DIR" ]; then
         echo "No dotfiles directory found, cloning custom config..."
         git clone "$REPO_URL" "$TARGET_DIR"
@@ -20,6 +21,7 @@ pull_dotfiles() {
             cd "$TARGET_DIR"
             CURRENT_URL=$(git remote get-url origin)
             if [ "$CURRENT_URL" = "$REPO_URL" ]; then
+                echo "Attempting to pull directory"
                 git pull origin $(git rev-parse --abbrev-ref HEAD)
                 # Reloads the hyperctrl 
                 refresh
