@@ -22,6 +22,9 @@ install_yay() {
     fi
 }
 
+install_zsh() {
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+}
 
 
 # Install yay
@@ -37,6 +40,6 @@ yay -S --needed --noconfirm neofetch
 echo "Installing GUI apps.."
 sudo pacman -S --needed --noconfirm discord obs-studio emacs-wayland 
 yay -S --needed --noconfirm firefox-developer-edition
-#Make dotfiles directory
-
+#install zsh
+install_zsh
 hyprctl reload
