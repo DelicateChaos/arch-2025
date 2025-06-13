@@ -32,7 +32,7 @@ install_yay
 # Desktop Enviroment 
 echo "Installing DE Components.."
 sudo pacman -S --needed --noconfirm waybar
-yay -S --needed --noconfirm swww      
+yay -Syu --needed --noconfirm swww      
 # TUI
 echo "Installing TUI.."
 sudo pacman -S --needed --noconfirm ffmpeg zoxide fzf stow neovim htop btop tree bat curl rsync grep bash-completion zsh
